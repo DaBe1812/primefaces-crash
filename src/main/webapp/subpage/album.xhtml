@@ -1,0 +1,29 @@
+<!DOCTYPE composition>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:jsf="http://xmlns.jcp.org/jsf"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:panelGroup id="searchResult">
+        <div class="card ui-fluid">
+            <div class="formgrid grid">
+                <div class="field col-12 md:col-4">
+                    <p:outputLabel for="@next" value="Album" />
+                    <h:outputText value="#{openTab.content.name}" />
+                </div>
+                <div class="field col-12 md:col-4">
+                    <p:outputLabel for="@next" value="Artist" />
+                    <h:outputText value="#{openTab.content.artist}" />
+                </div>
+                <div class="field col-12 md:col-4">
+                    <p:outputLabel for="@next" value="Release" />
+                    <h:outputText value="#{openTab.content.released}" />
+                </div>
+            </div>
+        </div>
+    </h:panelGroup>
+</ui:composition>

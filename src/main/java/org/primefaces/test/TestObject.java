@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode
-public class TestObject implements Serializable {
+public class TestObject implements Serializable, TabEntity {
 
     private String id;
     private String name;
@@ -21,4 +21,13 @@ public class TestObject implements Serializable {
         this.released = released;
     }
 
+    @Override
+    public String getIdentityField() {
+        return name + "/" + released;
+    }
+
+    @Override
+    public String getDetailViewName() {
+        return "album";
+    }
 }
