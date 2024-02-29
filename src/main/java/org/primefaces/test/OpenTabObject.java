@@ -4,9 +4,9 @@ import lombok.Getter;
 
 @Getter
 public class OpenTabObject {
-    private String title;
-    private String page;
-    private TabEntity content;
+    private final String title;
+    private final String page;
+    private final TabEntity content;
 
     public OpenTabObject(String title, String page, TabEntity content) {
         this.title = title;
